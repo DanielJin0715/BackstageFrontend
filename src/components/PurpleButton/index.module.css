@@ -1,0 +1,16 @@
+.button {
+    display: flex;
+    cursor: pointer;
+}
+
+.title {
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 20px;
+    letter-spacing: 0.15em;
+    background-color: #6A4DFD;
+    color: white;
+    border-radius: 6px;
+}

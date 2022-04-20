@@ -1,0 +1,45 @@
+.wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: #282c34;
+}
+
+.content {
+    width: 80%;
+    padding-top: 80px;
+    padding-bottom: 200px;
+}
+
+.title {
+    font-size: 90px;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 80px;
+}
+
+.roadmap_img {
+    width: 100%;
+    margin-bottom: 60px;
+}
+
+.tokenomic_img {
+    width: 100%;
+    margin-bottom: 300px;
+}
+
+@media (max-width: 768px) {
+    .content {
+        padding-top: 40px;
+        padding-bottom: 100px;
+    }
+
+    .title {
+        font-size: 50px;
+        margin-bottom: 40px;
+    }
+
+    .tokenomic_img {
+        margin-bottom: 100px;
+    }
+}
