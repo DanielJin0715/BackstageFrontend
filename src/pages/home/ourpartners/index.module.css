@@ -6,7 +6,7 @@
 }
 
 .content {
-    width: 80%;
+    width: 1360px;
     padding-top: 100px;
     padding-bottom: 120px;
     display: flex;
@@ -39,6 +39,7 @@
 
 @media (max-width: 768px) {
     .content {
+        width: 81%;
         padding-top: 50px;
         padding-bottom: 60px;
     }
@@ -53,6 +54,6 @@
     }
 
     .partner img {
-        width: 80%;
+        width: 81%;
     }
 }

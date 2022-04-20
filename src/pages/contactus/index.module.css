@@ -6,7 +6,7 @@
 }
 
 .form_wrapper {
-    width: 80%;
+    width: 1360px;
     padding-top: 240px;
     padding-bottom: 240px;
 }
@@ -73,6 +73,7 @@
 @media (max-width: 768px) {
     .form_wrapper {
         padding-bottom: 120px;
+        width: 81%;
     }
 
     .form {

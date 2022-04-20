@@ -31,6 +31,7 @@
 
 .top_content_title {
     font-size: 90px;
+    font-weight: 700;
 }
 
 .top_content_text {
@@ -46,7 +47,7 @@
     }
 
     .top_content {
-        width: 80%;
+        width: 81%;
     }
 
     .top_content_title {

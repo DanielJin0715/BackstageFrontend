@@ -53,11 +53,11 @@ const links = [
     route: "https://t.me/BKSBackstage",
     title: "Telegram",
   },
-  {
-    image: ["/images/icons/mail.png", "/images/icons/mail_.png"],
-    route: "",
-    title: "Mail",
-  },
+  // {
+  //   image: ["/images/icons/mail.png", "/images/icons/mail_.png"],
+  //   route: "",
+  //   title: "Mail",
+  // },
 ];
 
 function Logo() {
@@ -77,6 +77,7 @@ function TopMenu() {
   return (
     <div className={styles.top_menus}>
       <div
+        className={styles.menu}
         onMouseOver={() => setWallet("COMING SOON")}
         onMouseOut={() => {
           setWallet(menus[0].title);
@@ -87,6 +88,7 @@ function TopMenu() {
         </Link>
       </div>
       <div
+        className={styles.menu}
         onMouseOver={() => setMartketplace("COMING SOON")}
         onMouseOut={() => {
           setMartketplace(menus[1].title);
@@ -96,12 +98,12 @@ function TopMenu() {
           {marketplace}
         </Link>
       </div>
-      <div>
+      <div className={styles.menu}>
         <a href={menus[2].route} target="_blank" rel="noreferrer">
           {menus[2].title}
         </a>
       </div>
-      <div>
+      <div className={styles.menu}>
         <Link className={styles.top_menu} to={menus[3].route}>
           {menus[3].title}
         </Link>

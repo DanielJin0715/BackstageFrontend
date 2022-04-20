@@ -46,6 +46,10 @@
     color: white;
 }
 
+.menu :hover {
+    color: #6A4DFD;
+}
+
 .links {
     display: flex;
     gap: 60px;
@@ -69,14 +73,14 @@
     color: #B9B9DB;
 }
 
-.menu_text:hover {
-    color: #6A4DFD;
-}
-
 .link_sect {
     display: flex;
     align-items: center;
     gap: 10px;
+}
+
+.link_sect :hover {
+    color: #6A4DFD;
 }
 
 .link_image {

@@ -79,6 +79,7 @@ function Menu() {
           </div>
         ))} */}
         <div
+          className={styles.menu}
           onMouseOver={() => setWallet("COMING SOON")}
           onMouseOut={() => {
             setWallet(menus[0].title);
@@ -89,6 +90,7 @@ function Menu() {
           </Link>
         </div>
         <div
+          className={styles.menu}
           onMouseOver={() => setMartketplace("COMING SOON")}
           onMouseOut={() => {
             setMartketplace(menus[1].title);
@@ -98,7 +100,7 @@ function Menu() {
             {marketplace}
           </Link>
         </div>
-        <div>
+        <div className={styles.menu}>
           <a href={menus[2].route} target="_blank" rel="noreferrer">
             {menus[2].title}
           </a>
@@ -165,7 +167,7 @@ function Links() {
             </a>
           ))}
         </div>
-        <div className={styles.links_sub}>
+        {/* <div className={styles.links_sub}>
           {[6].map((id) => (
             <a
               href={links[id].route}
@@ -190,7 +192,7 @@ function Links() {
               </div>
             </a>
           ))}
-        </div>
+        </div> */}
       </div>
     </div>
   );

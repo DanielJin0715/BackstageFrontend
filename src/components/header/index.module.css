@@ -8,7 +8,7 @@
 }
 
 .header {
-    width: 80%;
+    width: 1360px;
     display: flex;
     row-gap: 20px;
     align-items: center;
@@ -45,6 +45,10 @@
     text-decoration: auto;
 }
 
+.menu :hover {
+    color: #6A4DFD;
+}
+
 .top_links {
     display: flex;
     gap: 20px;
@@ -60,6 +64,7 @@
     }
 
     .header {
+        width: 81%;
         flex-direction: column;
         align-items: flex-start;
     }
