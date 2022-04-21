@@ -90,7 +90,7 @@ function ContacUs() {
   }) => {
     console.log("request sent");
     axios
-      .post("https://magenta-palmier-afad04.netlify.app/sendmail", {
+      .post("http://localhost:3000/sendmail", {
         name,
         surName,
         phoneNumber,
