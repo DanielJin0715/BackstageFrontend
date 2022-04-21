@@ -13,7 +13,7 @@ const menus = [
   },
   {
     title: "Whitepaper",
-    route: "/whitepaper.pdf",
+    route: "/Backstage_WP.pdf",
   },
 ];
 

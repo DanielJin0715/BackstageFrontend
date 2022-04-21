@@ -14,7 +14,7 @@ const menus = [
   },
   {
     title: "WHTEPAPER",
-    route: "/whitepaper.pdf",
+    route: "/Backstage_WP.pdf",
   },
   {
     title: "CONTACT US",
