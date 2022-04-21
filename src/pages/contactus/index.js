@@ -4,6 +4,19 @@ import Footer from "../../components/footer";
 import Header from "../../components/header";
 import styles from "./index.module.css";
 
+// const api = axios.create();
+
+// api.interceptors.request.use(
+//   (request) => {
+//     let baseURL = "http://localhost:3000";
+//     request.url = baseURL + request.url;
+//     return request;
+//   },
+//   (error) => {
+//     return Promise.reject(error);
+//   }
+// );
+
 function Form({ submit }) {
   const [name, setName] = useState("");
   const [surName, setSurName] = useState("");
@@ -89,18 +102,31 @@ function ContacUs() {
     message,
   }) => {
     console.log("request sent");
-    axios
-      .post("http://localhost:3000/sendmail", {
-        name,
-        surName,
-        phoneNumber,
-        email,
-        organization,
-        message,
-      })
-      .then((res) => {
-        console.log(res.data);
-      });
+    return new Promise((resolve, reject) => {
+      axios
+        .post(
+          "http://ec2-3-143-0-249.us-east-2.compute.amazonaws.com:3000/api/auth/send_email",
+          {
+            name,
+            surName,
+            phoneNumber,
+            email,
+            organization,
+            message,
+          }
+        )
+        .then((res) => {
+          console.log(res.data);
+          // if (res.data.success === true) {
+          alert("Registered successfully");
+          // }
+          resolve();
+        })
+        .catch((err) => {
+          console.log(err);
+          reject();
+        });
+    });
   };
   return (
     <div
