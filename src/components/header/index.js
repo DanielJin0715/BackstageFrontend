@@ -113,21 +113,23 @@ function TopMenu() {
 }
 
 function TopLinks() {
-  const [focus, setFocus] = React.useState(0);
   return (
     <div className={styles.top_links}>
       {links.map((link, id) => (
-        <div
-          key={link.image}
-          onMouseOver={() => {
-            setFocus(id + 1);
-          }}
-          onMouseOut={() => setFocus(0)}
-        >
-          <a href={link.route} target="_blank" rel="noreferrer">
+        <div key={link.image}>
+          <a
+            href={link.route}
+            target="_blank"
+            rel="noreferrer"
+          >
             <img
               className={styles.top_link_image}
-              src={link.image[Number(focus === id + 1)]}
+              src={link.image[0]}
+              alt="social"
+            />
+            <img
+              className={styles.top_link_image_hover}
+              src={link.image[1]}
               alt="social"
             />
           </a>

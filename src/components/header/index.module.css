@@ -58,6 +58,22 @@
     height: 18px;
 }
 
+.top_link_image_hover {
+    height: 18px;
+}
+
+a .top_link_image_hover {
+    display: none;
+}
+
+a:hover .top_link_image {
+    display: none;
+}
+
+a:hover .top_link_image_hover {
+    display: block;
+}
+
 @media (max-width: 768px) {
     .header_wrapper {
         top: 30px;
