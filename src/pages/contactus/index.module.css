@@ -68,6 +68,7 @@
     padding-top: 12px;
     padding-bottom: 12px;
     border-radius: 2px;
+    cursor: pointer;
 }
 
 @media (max-width: 768px) {
