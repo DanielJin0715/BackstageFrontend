@@ -20,6 +20,11 @@
     overflow-x: hidden;
 }
 
+.top_video_wrapper img {
+    display: none;
+    width: 100%;
+}
+
 .top_video {
     height: 100%;
     width: auto;
@@ -54,6 +59,14 @@
 }
 
 @media (max-width: 768px) {
+    .top_video_wrapper video {
+        display: none;
+    }
+
+    .top_video_wrapper img {
+        display: block;
+    }
+
     .top_content_wrapper {
         position: relative;
         padding-top: 30px;
@@ -65,6 +78,6 @@
     }
 
     .top_content_title {
-        font-size: 50px;
+        font-size: 41px;
     }
 }

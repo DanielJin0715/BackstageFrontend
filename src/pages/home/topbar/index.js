@@ -45,6 +45,7 @@ function TopBar({ fRef }) {
           <source src="/images/top_back.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
+        <img src="/images/topbar.png" alt="" />
       </div>
       <Header />
       <TopContent fRef={fRef} />
