@@ -16,13 +16,13 @@ const artists1 = [
     content:
       "Born Gordon Sumner, Sting has received 17 Grammy Awards as a solo artist and frontman of The Police. One of the world’s best-selling artists, Sting’s music includes elements of rock, jazz, reggae and classical.",
   },
-  {
-    image: "/images/artists/artist3.png",
-    mark: "/images/artists/mark3.png",
-    name: "Solomun",
-    content:
-      "Solomun is a Bosnian-German DJ and a four-time DJ Awards Winner for Best Melodic House DJ, Best Producer and Best DJ.",
-  },
+  // {
+  //   image: "/images/artists/artist3.png",
+  //   mark: "/images/artists/mark3.png",
+  //   name: "Solomun",
+  //   content:
+  //     "Solomun is a Bosnian-German DJ and a four-time DJ Awards Winner for Best Melodic House DJ, Best Producer and Best DJ.",
+  // },
   {
     image: "/images/artists/artist4.png",
     mark: "/images/artists/mark4.png",
