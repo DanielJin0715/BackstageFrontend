@@ -65,6 +65,7 @@
 
 .artist1_description {
     font-size: 24px;
+    color: #B9B9DB;
     width: 81%;
 }
 
@@ -91,7 +92,9 @@
 }
 
 .artist2 {
-    width: 23%;
+    /* width: 23%; */
+    width: 316px;
+    height: 300px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -99,9 +102,23 @@
     border-radius: 14px;
 }
 
+.artist2:hover {
+    background: #6A4DFD;
+}
+
+.artist2:hover .artist2_image,
+.artist2:hover .artist2_mark,
+.artist2:hover .artist2_name {
+    display: none;
+}
+
+.artist2:hover .artist2_description {
+    display: block;
+}
+
 .artist2_image {
     width: 100%;
-    margin-bottom: 20px;
+    margin-bottom: 27px;
 }
 
 .artist2_mark {
@@ -113,6 +130,19 @@
     font-weight: bold;
     color: white;
     margin-bottom: 15px;
+}
+
+.artist2_description {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 28px;
+    text-align: center;
+    color: #FFFFFF;
+    padding-top: 48px;
+    padding-left: 32px;
+    padding-right: 32px;
+    display: none;
 }
 
 .manymore {
@@ -171,6 +201,11 @@
 
     .artist2 {
         width: 100%;
+        height: auto;
+    }
+    
+    .artist2_description {
+        padding-bottom: 48px;
     }
 
     .manymore {

@@ -7,8 +7,8 @@
 
 .content {
     width: 1360px;
-    padding-top: 100px;
-    padding-bottom: 120px;
+    padding-top: 120px;
+    padding-bottom: 200px;
     display: flex;
     flex-direction: column;
 }

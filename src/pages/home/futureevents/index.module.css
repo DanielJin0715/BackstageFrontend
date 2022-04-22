@@ -36,6 +36,12 @@
 
 }
 
+.item_wrapper:hover {
+    /* filter: drop-shadow(0px 0px 8px #6A4DFD); */
+    background: #6A4DFD;
+    transform: translate(0, -4px);
+}
+
 .item_back {
     width: 100%;
 }
@@ -73,7 +79,7 @@
     font-size: 18px;
     line-height: 24px;
     letter-spacing: 0.05em;
-    color: white;
+    color: #B9B9DB;
 }
 
 @media (max-width: 768px) {

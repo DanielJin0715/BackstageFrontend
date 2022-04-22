@@ -35,8 +35,12 @@
 
 .top_menus {
     display: flex;
-    gap: 20px;
+    gap: 40px;
+    font-style: normal;
+    font-weight: 700;
     font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0.15em;
     color: white;
 }
 

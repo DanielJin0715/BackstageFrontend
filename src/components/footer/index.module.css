@@ -63,8 +63,11 @@
 }
 
 .menu_title {
+    font-style: normal;
+    font-weight: 700;
     font-size: 20px;
-    font-weight: bold;
+    line-height: 26px;
+    letter-spacing: 0.03em;
     color: white;
 }
 
@@ -89,8 +92,13 @@
 
 .bottom {
     align-self: center;
-    font-size: 14px;
-    color: rgba(255, 255, 255, 0.5);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 20px;
+    text-align: center;
+    letter-spacing: 0.1em;
+    color: rgba(185, 185, 219, 0.5);
 }
 
 @media (max-width: 768px) {

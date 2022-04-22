@@ -40,10 +40,12 @@ function TopBar({ fRef }) {
         src="/images/top_back.png"
         alt="top_back"
       /> */}
-      <video autoPlay loop muted width="100%">
-        <source src="/images/top_back.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
+      <div className={styles.top_video_wrapper}>
+        <video autoPlay loop muted className={styles.top_video}>
+          <source src="/images/top_back.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
       <Header />
       <TopContent fRef={fRef} />
     </div>

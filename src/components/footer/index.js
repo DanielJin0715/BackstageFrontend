@@ -114,7 +114,7 @@ function Links() {
   const [focus, setFocus] = React.useState(0);
   return (
     <div className={styles.menus_wrapper}>
-      <div className={styles.menu_title}>Contact With Us</div>
+      <div className={styles.menu_title}>Connect With Us</div>
       <div className={styles.links}>
         <div className={styles.links_sub}>
           {[0, 1, 2].map((id) => (

@@ -3,6 +3,11 @@
     cursor: pointer;
 }
 
+.button:hover {
+    filter: drop-shadow(0px 0px 8px #6A4DFD);
+    transform: translate(0, -2px);
+}
+
 .title {
     padding-left: 34px;
     padding-right: 34px;
