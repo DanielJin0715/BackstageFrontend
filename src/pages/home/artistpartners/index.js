@@ -196,7 +196,7 @@ function ArtistPartners() {
   return (
     <div className={styles.wrapper}>
       <div className={styles.content}>
-        <div className={styles.title}>Artists Already Using Backstage</div>
+        <div className={styles.title}>Artists Using Backstage</div>
         <Artists1 />
         <Artists2 />
         <div className={styles.manymore}>

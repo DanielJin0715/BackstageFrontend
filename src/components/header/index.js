@@ -65,7 +65,7 @@ function Logo() {
     <Link to={routes.home} className={styles.logo_sect}>
       <div className={styles.logo_sect}>
         <img className={styles.logo_image} src="/logo.png" alt="logo" />
-        <div className={styles.logo_title}>BACKSTAGE</div>
+        {/* <div className={styles.logo_title}>BACKSTAGE</div> */}
       </div>
     </Link>
   );

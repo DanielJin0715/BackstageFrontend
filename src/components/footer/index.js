@@ -60,7 +60,7 @@ function Logo() {
     <Link to="/">
       <div className={styles.logo_sect}>
         <img className={styles.logo_image} src="/logo.png" alt="logo" />
-        <div className={styles.logo_title}>BACKSTAGE</div>
+        {/* <div className={styles.logo_title}>BACKSTAGE</div> */}
       </div>
     </Link>
   );
