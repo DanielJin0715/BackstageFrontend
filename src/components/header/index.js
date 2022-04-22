@@ -13,7 +13,7 @@ const menus = [
     route: "",
   },
   {
-    title: "WHTEPAPER",
+    title: "WHITEPAPER",
     route: "/Backstage_WP.pdf",
   },
   {

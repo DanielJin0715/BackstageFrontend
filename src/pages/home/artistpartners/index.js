@@ -14,14 +14,14 @@ const artists1 = [
     mark: "/images/artists/mark2.png",
     name: "Sting",
     content:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ",
+      "Born Gordon Sumner, Sting has received 17 Grammy Awards as a solo artist and frontman of The Police. One of the world’s best-selling artists, Sting’s music includes elements of rock, jazz, reggae and classical.",
   },
   {
     image: "/images/artists/artist3.png",
     mark: "/images/artists/mark3.png",
     name: "Solomun",
     content:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "Solomun is a Bosnian-German DJ and a four-time DJ Awards Winner for Best Melodic House DJ, Best Producer and Best DJ.",
   },
   {
     image: "/images/artists/artist4.png",
