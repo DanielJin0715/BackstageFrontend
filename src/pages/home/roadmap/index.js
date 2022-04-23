@@ -3,6 +3,8 @@ import Footer from "../../../components/footer";
 import styles from "./index.module.css";
 
 function Roadmap() {
+  const isMobile = window.innerWidth <= 768;
+
   return (
     <div
       className={styles.wrapper}
@@ -15,12 +17,20 @@ function Roadmap() {
         <div className={styles.title}>Roadmap & Tokenomics</div>
         <img
           className={styles.roadmap_img}
-          src="/images/roadmap/roadmap.png"
+          src={
+            isMobile
+              ? "/images/roadmap/roadmap_mobile.png"
+              : "/images/roadmap/roadmap.png"
+          }
           alt=""
         />
         <img
           className={styles.tokenomic_img}
-          src="/images/roadmap/tokenomic.png"
+          src={
+            isMobile
+              ? "/images/roadmap/tokenomic_mobile.png"
+              : "/images/roadmap/tokenomic.png"
+          }
           alt=""
         />
         <Footer />

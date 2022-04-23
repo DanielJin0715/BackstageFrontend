@@ -60,14 +60,24 @@ const links = [
   // },
 ];
 
-function Logo() {
+function Logo({ onHamburgur, hamburgurOpen }) {
   return (
-    <Link to={routes.home} className={styles.logo_sect}>
-      <div className={styles.logo_sect}>
+    <div className={styles.logo_sect}>
+      <Link to={routes.home} className={styles.logo_image_wrapper}>
         <img className={styles.logo_image} src="/logo.png" alt="logo" />
-        {/* <div className={styles.logo_title}>BACKSTAGE</div> */}
-      </div>
-    </Link>
+      </Link>
+      {/* <div className={styles.logo_title}>BACKSTAGE</div> */}
+      <img
+        className={styles.mobile_menu}
+        onClick={onHamburgur}
+        src={
+          hamburgurOpen
+            ? "/images/header/close.png"
+            : "/images/header/hamburgur.png"
+        }
+        alt=""
+      />
+    </div>
   );
 }
 
@@ -117,11 +127,7 @@ function TopLinks() {
     <div className={styles.top_links}>
       {links.map((link, id) => (
         <div key={link.image}>
-          <a
-            href={link.route}
-            target="_blank"
-            rel="noreferrer"
-          >
+          <a href={link.route} target="_blank" rel="noreferrer">
             <img
               className={styles.top_link_image}
               src={link.image[0]}
@@ -140,12 +146,29 @@ function TopLinks() {
 }
 
 function Header() {
+  const isMobile = window.innerWidth <= 768;
+  const [hamburgurOpen, setHamburgurOpen] = useState(false);
+
+  const onHamburgur = () => {
+    setHamburgurOpen(!hamburgurOpen);
+  };
+
   return (
-    <div className={styles.header_wrapper}>
+    <div
+      className={styles.header_wrapper}
+      style={
+        isMobile && hamburgurOpen
+          ? { background: "#14142F", height: "100vh" }
+          : { background: "transparent", height: "auto" }
+      }
+    >
       <div className={styles.header}>
-        <Logo />
-        <TopMenu />
-        <TopLinks />
+        <Logo onHamburgur={onHamburgur} hamburgurOpen={hamburgurOpen} />
+        {(!isMobile || hamburgurOpen) && <TopMenu />}
+        {(!isMobile || hamburgurOpen) && (
+          <div className={styles.mobile_splitter}></div>
+        )}
+        {(!isMobile || hamburgurOpen) && <TopLinks />}
       </div>
     </div>
   );

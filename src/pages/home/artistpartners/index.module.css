@@ -160,19 +160,22 @@
 
 @media (max-width: 768px) {
     .content {
-        width: 81%;
+        width: 100%;
+        padding-left: 24px;
+        padding-right: 24px;
         padding-top: 50px;
-        padding-bottom: 60px;
+        padding-bottom: 100px;
     }
 
     .title {
-        font-size: 41px;
-        margin-bottom: 40px;
+        font-size: 32px;
+        line-height: 34px;
+        margin-bottom: 34px;
     }
 
     .artists1 {
-        gap: 40px;
-        margin-bottom: 60px;
+        gap: 35px;
+        margin-bottom: 48px;
     }
 
     .artist1_wrapper {
@@ -187,11 +190,27 @@
     .artist1_content {
         padding-left: 30px;
         padding-bottom: 30px;
-        gap: 10px;
+        gap: 7px;
+        align-items: center;
+        text-align: center;
+    }
+
+    .artist1_content_right {
+        align-items: center !important;
+        text-align: center !important;
     }
 
     .artist1_name {
         font-size: 30px;
+    }
+
+    .artist1_description {
+        font-size: 16px;
+        line-height: 20px;
+        letter-spacing: 0.03em;
+        width: 100%;
+        padding-left: 24px;
+        padding-right: 24px;
     }
 
     .artist1_image_wrapper {
@@ -199,9 +218,28 @@
         order: 1 !important;
     }
 
+    .artists2 {
+        gap: 0px;
+        row-gap: 24px;
+        margin-bottom: 45px;
+    }
+
     .artist2 {
-        width: 100%;
+        width: 47%;
         height: auto;
+    }
+
+    .artist2_image {
+        margin-bottom: 12px;
+    }
+
+    .artist2_mark {
+        height: 10px;
+    }
+
+    .artist2_name {
+        font-size: 14px;
+        line-height: 16px;
     }
     
     .artist2_description {
@@ -209,6 +247,9 @@
     }
 
     .manymore {
-        font-size: 24px;
+        font-size: 16px;
+        line-height: 20px;
+        padding-left: 20px;
+        padding-right: 20px;
     }
 }

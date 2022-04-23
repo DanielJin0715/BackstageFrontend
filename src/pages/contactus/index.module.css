@@ -116,8 +116,12 @@
 
 @media (max-width: 768px) {
     .form_wrapper {
+        /* width: 81%; */
+        width: 100%;
+        padding-left: 24px;
+        padding-right: 24px;
+        padding-top: 100px;
         padding-bottom: 120px;
-        width: 81%;
     }
 
     .form {
@@ -126,6 +130,10 @@
 
     .form_title {
         font-size: 41px;
+    }
+
+    form {
+        width: 100%;
     }
 
     .form_group {

@@ -80,6 +80,8 @@ function FutureItems() {
 }
 
 function FutureEvents({ fRef }) {
+  const isMobile = window.innerWidth <= 768;
+  
   return (
     <div
       className={styles.future_wrapper}
@@ -90,7 +92,7 @@ function FutureEvents({ fRef }) {
     >
       <div className={styles.future}>
         <div className={styles.future_text} ref={fRef}>
-          The Future of Events is <br /> Powered by Blockchain
+          The Future of Events is {!isMobile && <br />} Powered by Blockchain
         </div>
         <FutureItems />
       </div>

@@ -113,7 +113,15 @@
         gap: 50px;
     }
 
+    .menus {
+        gap: 15px;
+    }
+
     .links {
         gap: 40px;
+    }
+
+    .links_sub {
+        gap: 24px;
     }
 }

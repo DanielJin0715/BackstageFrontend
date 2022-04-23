@@ -26,12 +26,21 @@ const burnflows = [
   {
     title: "STEP 1",
     image: "/images/buyback/fitem1.png",
-    content: "A partner venue signs with Backstage to use our PoS system.",
+    content: (
+      <>
+        <br />A partner venue signs with Backstage to use our PoS system."
+      </>
+    ),
   },
   {
     title: "STEP 2",
     image: "/images/buyback/fitem2.png",
-    content: "20% of BKS token revenue goes to staking for 2 years.",
+    content: (
+      <>
+        <br />
+        20% of BKS token revenue goes to staking for 2 years.
+      </>
+    ),
   },
   {
     title: "STEP 3",
@@ -83,10 +92,18 @@ function BurnFlow(props) {
   );
 }
 
-function BurnFlows() {
+function BurnFlows({ isMobile }) {
   return (
     <div className={styles.burnflows_wrapper}>
-      <img className={styles.burnflows_back} src="/images/buyback/flow_back.png" alt="" />
+      <img
+        className={styles.burnflows_back}
+        src={
+          isMobile
+            ? "/images/buyback/flow_back_mobile.png"
+            : "/images/buyback/flow_back.png"
+        }
+        alt=""
+      />
       <div className={styles.burnflows}>
         {burnflows.map((flow) => (
           <BurnFlow key={flow.title} item={flow} />
@@ -97,6 +114,8 @@ function BurnFlows() {
 }
 
 function BuyBack() {
+  const isMobile = window.innerWidth <= 768;
+
   return (
     <div
       className={styles.wrapper}
@@ -107,11 +126,11 @@ function BuyBack() {
     >
       <div className={styles.content}>
         <div className={styles.title}>
-          Token Dynamics: Buyback <br /> and Burn
+          Token Dynamics: Buyback {!isMobile && <br />} and Burn
         </div>
         <BuyBacks />
         <div className={styles.flow_title}>Buyback and Burn Flow</div>
-        <BurnFlows />
+        <BurnFlows isMobile={isMobile} />
       </div>
     </div>
   );

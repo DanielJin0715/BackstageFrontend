@@ -20,11 +20,6 @@
     overflow-x: hidden;
 }
 
-.top_video_wrapper img {
-    display: none;
-    width: 100%;
-}
-
 .top_video {
     height: 100%;
     width: auto;
@@ -63,21 +58,22 @@
         display: none;
     }
 
-    .top_video_wrapper img {
-        display: block;
-    }
-
-    .top_content_wrapper {
-        position: relative;
-        padding-top: 30px;
-        padding-bottom: 30px;
-    }
-
     .top_content {
-        width: 81%;
+        width: 100%;
+        padding-left: 24px;
+        padding-right: 24px;
     }
 
     .top_content_title {
-        font-size: 41px;
+        font-size: 32px;
+        line-height: 34px;
+        margin-bottom: 10px;
+    }
+
+    .top_content_text {
+        font-size: 16px;
+        line-height: 20px;
+        letter-spacing: 0.05em;
+        margin-bottom: 20px;
     }
 }

@@ -39,21 +39,31 @@
 
 @media (max-width: 768px) {
     .content {
-        width: 81%;
-        padding-top: 50px;
+        width: 100%;
+        padding-left: 24px;
+        padding-right: 24px;
+        padding-top: 60px;
         padding-bottom: 60px;
     }
 
     .title {
-        font-size: 41px;
-        margin-bottom: 40px;
+        font-size: 30px;
+        line-height: 32px;
+        margin-bottom: 32px;
+    }
+
+    .partners {
+        row-gap: 32px
+
     }
 
     .partner {
         width: 46%;
+        height: 72px;
     }
 
     .partner img {
-        width: 81%;
+        /* width: 64%; */
+        width: 40%;
     }
 }
