@@ -18,7 +18,7 @@ const artists1 = [
   },
   {
     image: "/images/artists/artist3.png",
-    mark: "/images/artists/mark3.png",
+    // mark: "/images/artists/mark3.png",
     // name: "Solomun",
     // content:
     //   "Solomun is a Bosnian-German DJ and a four-time DJ Awards Winner for Best Melodic House DJ, Best Producer and Best DJ.",
