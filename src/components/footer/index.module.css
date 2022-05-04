@@ -43,7 +43,10 @@
     align-items: flex-start;
     gap: 10px;
     font-size: 16px;
-    color: white;
+}
+
+.menu a {
+    color: #B9B9DB;
 }
 
 .menu :hover {
@@ -87,7 +90,7 @@
 }
 
 .link_image {
-    height: 14px;
+    height: 18px;
 }
 
 .bottom {

@@ -1,6 +1,17 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { useGlobalStateContext } from "../../context";
 import { routes } from "../../routes";
+import {
+  FaceBookIcon,
+  FOCUS_STATE,
+  GithubIcon,
+  InstagramIcon,
+  MediumIcon,
+  NONE_STATE,
+  TelegramIcon,
+  TwitterIcon,
+} from "../Icons";
 import styles from "./index.module.css";
 
 const menus = [
@@ -24,32 +35,32 @@ const menus = [
 
 const links = [
   {
-    image: ["/images/icons/twitter.png", "/images/icons/twitter_.png"],
+    image: TwitterIcon,
     route: "https://twitter.com/BackstageBks",
     title: "Twitter",
   },
   {
-    image: ["/images/icons/medium.png", "/images/icons/medium_.png"],
+    image: MediumIcon,
     route: "https://bksbackstageofficial.medium.com/",
     title: "Medium",
   },
   {
-    image: ["/images/icons/facebook.png", "/images/icons/facebook_.png"],
+    image: FaceBookIcon,
     route: "https://www.facebook.com/BKSBackstage",
     title: "Facebook",
   },
   {
-    image: ["/images/icons/instagram.png", "/images/icons/instagram_.png"],
+    image: InstagramIcon,
     route: "https://www.instagram.com/bksbackstage/?hl=en",
     title: "Instagram",
   },
   {
-    image: ["/images/icons/github.png", "/images/icons/github_.png"],
+    image: GithubIcon,
     route: "https://github.com/BKSbackstage",
     title: "Github",
   },
   {
-    image: ["/images/icons/telegram.png", "/images/icons/telegram_.png"],
+    image: TelegramIcon,
     route: "https://t.me/BKSBackstage",
     title: "Telegram",
   },
@@ -126,17 +137,12 @@ function TopLinks() {
   return (
     <div className={styles.top_links}>
       {links.map((link, id) => (
-        <div key={link.image}>
+        <div key={link.title}>
           <a href={link.route} target="_blank" rel="noreferrer">
-            <img
-              className={styles.top_link_image}
-              src={link.image[0]}
-              alt="social"
-            />
-            <img
+            <link.image className={styles.top_link_image} color={NONE_STATE} />
+            <link.image
               className={styles.top_link_image_hover}
-              src={link.image[1]}
-              alt="social"
+              color={FOCUS_STATE}
             />
           </a>
         </div>
@@ -146,7 +152,7 @@ function TopLinks() {
 }
 
 function Header() {
-  const isMobile = window.innerWidth <= 768;
+  const { isMobile } = useGlobalStateContext();
   const [hamburgurOpen, setHamburgurOpen] = useState(false);
 
   const onHamburgur = () => {

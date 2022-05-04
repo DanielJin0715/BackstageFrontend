@@ -229,6 +229,16 @@
         height: auto;
     }
 
+    .artist2:hover .artist2_image,
+    .artist2:hover .artist2_mark,
+    .artist2:hover .artist2_name {
+        display: block;
+    }
+
+    .artist2:hover .artist2_description {
+        display: none;
+    }
+
     .artist2_image {
         margin-bottom: 12px;
     }
@@ -241,7 +251,7 @@
         font-size: 14px;
         line-height: 16px;
     }
-    
+
     .artist2_description {
         padding-bottom: 48px;
     }

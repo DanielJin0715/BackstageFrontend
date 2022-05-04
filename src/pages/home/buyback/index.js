@@ -1,4 +1,5 @@
 import React from "react";
+import { useGlobalStateContext } from "../../../context";
 import styles from "./index.module.css";
 
 const buybacks = [
@@ -114,7 +115,7 @@ function BurnFlows({ isMobile }) {
 }
 
 function BuyBack() {
-  const isMobile = window.innerWidth <= 768;
+  const { isMobile } = useGlobalStateContext();
 
   return (
     <div

@@ -1,9 +1,10 @@
 import React from "react";
 import Footer from "../../../components/footer";
+import { useGlobalStateContext } from "../../../context";
 import styles from "./index.module.css";
 
 function Roadmap() {
-  const isMobile = window.innerWidth <= 768;
+  const { isMobile } = useGlobalStateContext();
 
   return (
     <div

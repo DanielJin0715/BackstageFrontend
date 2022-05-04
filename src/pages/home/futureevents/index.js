@@ -1,4 +1,5 @@
 import React from "react";
+import { useGlobalStateContext } from "../../../context";
 import styles from "./index.module.css";
 
 const items = [
@@ -80,8 +81,8 @@ function FutureItems() {
 }
 
 function FutureEvents({ fRef }) {
-  const isMobile = window.innerWidth <= 768;
-  
+  const { isMobile } = useGlobalStateContext();
+
   return (
     <div
       className={styles.future_wrapper}

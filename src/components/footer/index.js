@@ -1,6 +1,16 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import styles from "./index.module.css";
+import {
+  FaceBookIcon,
+  FOCUS_STATE,
+  GithubIcon,
+  InstagramIcon,
+  MediumIcon,
+  NONE_STATE,
+  TelegramIcon,
+  TwitterIcon,
+} from "../Icons";
 
 const menus = [
   {
@@ -19,40 +29,40 @@ const menus = [
 
 const links = [
   {
-    image: ["/images/icons/twitter.png", "/images/icons/twitter_.png"],
+    image: TwitterIcon,
     route: "https://twitter.com/BackstageBks",
     title: "Twitter",
   },
   {
-    image: ["/images/icons/medium.png", "/images/icons/medium_.png"],
+    image: MediumIcon,
     route: "https://bksbackstageofficial.medium.com/",
     title: "Medium",
   },
   {
-    image: ["/images/icons/facebook.png", "/images/icons/facebook_.png"],
+    image: FaceBookIcon,
     route: "https://www.facebook.com/BKSBackstage",
     title: "Facebook",
   },
   {
-    image: ["/images/icons/instagram.png", "/images/icons/instagram_.png"],
+    image: InstagramIcon,
     route: "https://www.instagram.com/bksbackstage/?hl=en",
     title: "Instagram",
   },
   {
-    image: ["/images/icons/github.png", "/images/icons/github_.png"],
+    image: GithubIcon,
     route: "https://github.com/BKSbackstage",
     title: "Github",
   },
   {
-    image: ["/images/icons/telegram.png", "/images/icons/telegram_.png"],
+    image: TelegramIcon,
     route: "https://t.me/BKSBackstage",
     title: "Telegram",
   },
-  {
-    image: ["/images/icons/mail.png", "/images/icons/mail_.png"],
-    route: "",
-    title: "Mail",
-  },
+  // {
+  //   image: ["/images/icons/mail.png", "/images/icons/mail_.png"],
+  //   route: "",
+  //   title: "Mail",
+  // },
 ];
 
 function Logo() {
@@ -117,55 +127,69 @@ function Links() {
       <div className={styles.menu_title}>Connect With Us</div>
       <div className={styles.links}>
         <div className={styles.links_sub}>
-          {[0, 1, 2].map((id) => (
-            <a
-              href={links[id].route}
-              target="_blank"
-              rel="noreferrer"
-              key={links[id].image}
-            >
-              <div
-                className={styles.link_sect}
-                onMouseOver={() => {
-                  setFocus(id + 1);
-                }}
-                onMouseOut={() => setFocus(0)}
+          {[0, 1, 2].map((id) => {
+            const IconImage = links[id].image;
+            return (
+              <a
+                href={links[id].route}
+                target="_blank"
+                rel="noreferrer"
+                key={links[id].image}
               >
-                <img
-                  className={styles.link_image}
-                  src={links[id].image[Number(focus === id + 1)]}
-                  alt=""
-                />
-                <div className={styles.menu_text}>{links[id].title}</div>
-              </div>
-            </a>
-          ))}
+                <div
+                  className={styles.link_sect}
+                  onMouseOver={() => {
+                    setFocus(id + 1);
+                  }}
+                  onMouseOut={() => setFocus(0)}
+                >
+                  <IconImage
+                    className={styles.link_image}
+                    color={focus === id + 1 ? FOCUS_STATE : NONE_STATE}
+                  />
+                  {/* <img
+                    className={styles.link_image}
+                    src={links[id].image[Number(focus === id + 1)]}
+                    alt=""
+                  /> */}
+                  <div className={styles.menu_text}>{links[id].title}</div>
+                </div>
+              </a>
+            );
+          })}
         </div>
         <div className={styles.links_sub}>
-          {[3, 4, 5].map((id) => (
-            <a
-              href={links[id].route}
-              target="_blank"
-              rel="noreferrer"
-              key={links[id].image}
-            >
-              <div
-                className={styles.link_sect}
+          {[3, 4, 5].map((id) => {
+            const IconImage = links[id].image;
+            return (
+              <a
+                href={links[id].route}
+                target="_blank"
+                rel="noreferrer"
                 key={links[id].image}
-                onMouseOver={() => {
-                  setFocus(id + 1);
-                }}
-                onMouseOut={() => setFocus(0)}
               >
-                <img
+                <div
+                  className={styles.link_sect}
+                  key={links[id].image}
+                  onMouseOver={() => {
+                    setFocus(id + 1);
+                  }}
+                  onMouseOut={() => setFocus(0)}
+                >
+                  <IconImage
+                    className={styles.link_image}
+                    color={focus === id + 1 ? FOCUS_STATE : NONE_STATE}
+                  />
+                  {/* <img
                   className={styles.link_image}
                   src={links[id].image[Number(focus === id + 1)]}
                   alt=""
-                />
-                <div className={styles.menu_text}>{links[id].title}</div>
-              </div>
-            </a>
-          ))}
+                /> */}
+                  <div className={styles.menu_text}>{links[id].title}</div>
+                </div>
+              </a>
+            );
+          })}
         </div>
         {/* <div className={styles.links_sub}>
           {[6].map((id) => (

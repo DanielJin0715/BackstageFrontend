@@ -72,14 +72,6 @@
     gap: 20px;
 }
 
-.top_link_image {
-    height: 18px;
-}
-
-.top_link_image_hover {
-    height: 18px;
-}
-
 a .top_link_image_hover {
     display: none;
 }
