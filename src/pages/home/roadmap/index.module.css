@@ -1,4 +1,5 @@
 .wrapper {
+    position: relative;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -9,6 +10,7 @@
     width: 1360px;
     padding-top: 120px;
     padding-bottom: 200px;
+    z-index: 2;
 }
 
 .title {
@@ -26,6 +28,20 @@
 .tokenomic_img {
     width: 100%;
     margin-bottom: 300px;
+}
+
+.backImageWrapper {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    z-index: 1;
+}
+
+.backImage {
+    height: 100%;
 }
 
 @media (max-width: 768px) {

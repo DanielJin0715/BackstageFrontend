@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import styles from "./index.module.css";
 
 import Header from "../../../components/header";
@@ -27,6 +27,12 @@ function TopContent({ fRef }) {
 }
 
 function TopBar({ fRef }) {
+  const vRef = useRef();
+
+  useEffect(() => {
+    vRef.current.play();
+  }, [vRef]);
+
   return (
     <div
       className={styles.top_bar}
@@ -41,7 +47,14 @@ function TopBar({ fRef }) {
         alt="top_back"
       /> */}
       <div className={styles.top_video_wrapper}>
-        <video autoPlay loop muted className={styles.top_video}>
+        <video
+          autoPlay
+          playsInline
+          loop
+          muted
+          className={styles.top_video}
+          ref={vRef}
+        >
           <source src="/images/top_back.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>

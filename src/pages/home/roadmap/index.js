@@ -36,6 +36,13 @@ function Roadmap() {
         />
         <Footer />
       </div>
+      <div className={styles.backImageWrapper}>
+        <img
+          className={styles.backImage}
+          src="/images/roadmap_back.png"
+          alt=""
+        />
+      </div>
     </div>
   );
 }
