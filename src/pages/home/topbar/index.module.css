@@ -54,9 +54,9 @@
 }
 
 @media (max-width: 768px) {
-    .top_video_wrapper video {
+    /* .top_video_wrapper video {
         display: none;
-    }
+    } */
 
     .top_content {
         width: 100%;
