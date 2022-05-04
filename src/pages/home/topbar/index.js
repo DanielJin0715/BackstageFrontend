@@ -30,8 +30,19 @@ function TopBar({ fRef }) {
   const vRef = useRef();
 
   useEffect(() => {
+    console.log("Page Loaded");
+    vRef.current.play();
+  }, []);
+
+  useEffect(() => {
+    console.log("Video Loaded");
     vRef.current.play();
   }, [vRef]);
+
+  const onClickPage = () => {
+    console.log("Page Clicked");
+    vRef.current.play();
+  };
 
   return (
     <div
@@ -40,6 +51,7 @@ function TopBar({ fRef }) {
         backgroundImage: `url("/images/topbar.png")`,
         backgroundSize: "cover",
       }}
+      onClick={onClickPage}
     >
       {/* <img
         className={styles.top_back}
