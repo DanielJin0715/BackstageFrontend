@@ -18,13 +18,13 @@ const artists1 = [
   },
   {
     image: "/images/artists/artist3.png",
-    // mark: "/images/artists/mark3.png",
+    mark: "/images/artists/mark3.png",
     // name: "Solomun",
     // content:
     //   "Solomun is a Bosnian-German DJ and a four-time DJ Awards Winner for Best Melodic House DJ, Best Producer and Best DJ.",
     name: "Guti",
     content:
-      "'Drawing up his own way' is the philosophy of Guti. He shoned in the world of Jazz at early age, he demonstrates to be a sensible & intense pianist. In 2006, life take him to a new path: Techno music. Curious, ironic & creative, fusing electronic music with his jazz & latin roots.",
+      "‘Drawing up his way’ is the philosophy of Guti. He shoned in the world of Jazz at an early age, he demonstrates to be a sensible & intense pianist. In 2006, life took him to a new path: techno music. Curious, ironic & creative, fusing electronic music with his jazz & Latin roots.",
   },
   {
     image: "/images/artists/artist4.png",
@@ -199,7 +199,7 @@ function ArtistPartners() {
   return (
     <div className={styles.wrapper}>
       <div className={styles.content}>
-        <div className={styles.title}>Artists Using Backstage</div>
+        <div className={styles.title}>Artists in our Ecosystem</div>
         <Artists1 />
         <Artists2 />
         <div className={styles.manymore}>

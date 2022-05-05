@@ -29,7 +29,7 @@ const burnflows = [
     image: "/images/buyback/fitem1.png",
     content: (
       <>
-        <br />A partner venue signs with Backstage to use our PoS system."
+        <br />A partner venue signs with Backstage to use our PoS system.
       </>
     ),
   },
