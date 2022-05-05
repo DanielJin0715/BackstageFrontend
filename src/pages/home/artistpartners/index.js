@@ -123,9 +123,12 @@ const artists2 = [
   {
     image: "/images/artists/item12.png",
     mark: "/images/artists/imark12.png",
-    name: "Luciano",
+    // name: "Luciano",
+    name: "Guti",
+    // description:
+    //   "A Chilean and Swiss DJ and producer, Luciano has been named Best Tech House DJ five times. Thanks to his efforts, electronic music has become more popular in Chile.",
     description:
-      "A Chilean and Swiss DJ and producer, Luciano has been named Best Tech House DJ five times. Thanks to his efforts, electronic music has become more popular in Chile.",
+      "He shoned in the world of Jazz at an early age, he demonstrates to be a sensible & intense pianist. In 2006, life took him to a new path: techno music. ",
   },
 ];
 
