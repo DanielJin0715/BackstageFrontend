@@ -19,14 +19,14 @@
 
 .buybacks {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     flex-wrap: wrap;
     row-gap: 30px;
     margin-bottom: 120px;
 }
 
 .buyback {
-    width: 32%;
+    width: 31%;
     background: linear-gradient(44.98deg, rgba(98, 98, 254, 0) 14.65%, rgba(97, 97, 247, 0.1198) 23.12%, rgba(94, 93, 229, 0.2882) 35.03%, rgba(88, 87, 199, 0.4854) 48.98%, rgba(81, 79, 157, 0.7045) 64.48%, rgba(72, 69, 104, 0.9389) 81.06%, #454259 85.38%);
     border-radius: 14px;
 }

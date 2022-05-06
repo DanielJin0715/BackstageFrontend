@@ -11,7 +11,7 @@ function Partners() {
     <div className={styles.partners}>
       {partners.map((partner) => (
         <div className={styles.partner} key={partner}>
-          <img src={"/images/partners/p" + partner + ".png"} alt="" />
+          <img src={"/images/partners/new/p (" + partner + ").png"} alt="" />
         </div>
       ))}
     </div>

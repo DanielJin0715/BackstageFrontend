@@ -54,6 +54,7 @@
 }
 
 .artist1_content_right {
+    padding-right: 60px;
     align-items: flex-end !important;
     text-align: right !important;
 }
