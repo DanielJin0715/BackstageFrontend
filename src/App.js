@@ -3,6 +3,7 @@ import HomePage from "./pages/home/index";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ContacUs from "./pages/contactus";
 import { routes } from "./routes";
+import CookieConsent from "./components/cookieconsent";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
           <Route path={routes.contactus} element={<ContacUs />} />
         </Routes>
       </BrowserRouter>
+      <CookieConsent />
     </div>
   );
 }

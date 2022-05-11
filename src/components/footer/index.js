@@ -25,6 +25,10 @@ const menus = [
     title: "Whitepaper",
     route: "/Backstage_WP.pdf",
   },
+  {
+    title: "Terms and Condition",
+    route: "/TERMS-OF-USE-AND-PRIVACY POLICY-Bksbackstage.pdf",
+  },
 ];
 
 const links = [
@@ -110,11 +114,13 @@ function Menu() {
             {marketplace}
           </Link>
         </div>
-        <div className={styles.menu}>
-          <a href={menus[2].route} target="_blank" rel="noreferrer">
-            {menus[2].title}
-          </a>
-        </div>
+        {[2, 3].map((index) => (
+          <div className={styles.menu}>
+            <a href={menus[index].route} target="_blank" rel="noreferrer">
+              {menus[index].title}
+            </a>
+          </div>
+        ))}
       </div>
     </div>
   );

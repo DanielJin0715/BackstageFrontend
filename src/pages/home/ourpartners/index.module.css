@@ -22,13 +22,14 @@
 
 .partners {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     flex-wrap: wrap;
     row-gap: 40px;
 }
 
 .partner {
-    width: 22%;
+    /* width: 22%; */
+    width: 273px;
     /* height: 140px;
     background: linear-gradient(74.55deg, rgba(255, 255, 255, 0.05) 0.07%, rgba(255, 255, 255, 0) 99.92%);
     border-radius: 8px; */
