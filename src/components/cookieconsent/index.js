@@ -14,6 +14,7 @@ const CookieConsent = () => {
 
   const onAllow = () => {
     setCookiePopup(false);
+    localStorage.setItem("consent", "accept");
   };
   const onDeny = () => {
     setCookiePopup(false);
