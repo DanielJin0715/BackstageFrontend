@@ -1,11 +1,12 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 // import axios from "axios";
 import emailjs from "@emailjs/browser";
 import Footer from "../../components/footer";
 import Header from "../../components/header";
 import styles from "./index.module.css";
+import ReCAPTCHA from "react-google-recaptcha";
 
-function Form({ form, submit }) {
+function Form({ form, submit, captcha, recaptchaRef, onChangeCaptcha }) {
   return (
     <div className={styles.form_wrapper}>
       <div className={styles.form}>
@@ -45,9 +46,19 @@ function Form({ form, submit }) {
               <textarea className={styles.form_textarea} name="message" />
             </div>
 
-            <div className={styles.form_submit} onClick={submit}>
-              SUBMIT
-            </div>
+            {captcha && (
+              <div className={styles.form_submit} onClick={submit}>
+                SUBMIT
+              </div>
+            )}
+
+            <ReCAPTCHA
+              ref={recaptchaRef}
+              // size="invisible"
+              sitekey="6LeaLwUgAAAAAIBN0ef2xzTx0rIfuLb1POyzr_ei"
+              // sitekey="6Lf4RAUgAAAAAJbw7qXWVBfVtM2Ocggfs0KYGPjv"
+              onChange={onChangeCaptcha}
+            />
           </div>
         </form>
       </div>
@@ -58,9 +69,15 @@ function Form({ form, submit }) {
 
 function ContacUs() {
   const form = useRef();
+  const recaptchaRef = React.createRef();
+  const [captcha, setCaptcha] = useState(null);
+
+  const onChangeCaptcha = (e) => {
+    console.log(e, recaptchaRef.current.getValue());
+    setCaptcha(e);
+  };
 
   const submit = () => {
-    console.log("request sent");
     emailjs
       .sendForm(
         "service_erw2ld9",
@@ -94,6 +111,7 @@ function ContacUs() {
         }
       );
   };
+
   return (
     <div
       className={styles.wrapper}
@@ -103,9 +121,20 @@ function ContacUs() {
       }}
     >
       <Header />
-      <Form submit={submit} form={form} />
+      <Form
+        submit={submit}
+        form={form}
+        captcha={captcha}
+        recaptchaRef={recaptchaRef}
+        onChangeCaptcha={onChangeCaptcha}
+      />
     </div>
   );
 }
 
 export default ContacUs;
+
+/*
+6LeaLwUgAAAAAIBN0ef2xzTx0rIfuLb1POyzr_ei
+6LeaLwUgAAAAAC4gEFxjtiJYzkWCRGu08HaUHu-W
+*/

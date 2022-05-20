@@ -115,7 +115,7 @@ function Menu() {
           </Link>
         </div>
         {[2, 3].map((index) => (
-          <div className={styles.menu}>
+          <div className={styles.menu} key={index}>
             <a href={menus[index].route} target="_blank" rel="noreferrer">
               {menus[index].title}
             </a>
