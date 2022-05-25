@@ -12,19 +12,16 @@ const artists1 = [
   {
     image: "/images/artists/artist2.png",
     mark: "/images/artists/mark2.png",
-    name: "Sting",
+    name: "Fuerza Bruta",
     content:
-      "Born Gordon Sumner, Sting has received 17 Grammy Awards as a solo artist and frontman of The Police. One of the world’s best-selling artists, Sting’s music includes elements of rock, jazz, reggae and classical.",
+      "A 360 degree postmodern theatre show experience running downtown, Off-Broadway, in New York at the Daryl Roth Theater since 2007. The Show has since travelled all over the World, performing in the most famous locations such as London, Tokyo, Buenos Aires, Miami, and more.",
   },
   {
     image: "/images/artists/artist3.png",
-    mark: "/images/artists/mark3.png",
-    // name: "Solomun",
-    // content:
-    //   "Solomun is a Bosnian-German DJ and a four-time DJ Awards Winner for Best Melodic House DJ, Best Producer and Best DJ.",
-    name: "Guti",
+    mark: "/images/artists/mark3_.png",
+    name: "Fire of Anatolia",
     content:
-      "‘Drawing up his way’ is the philosophy of Guti. He shoned in the world of Jazz at an early age, he demonstrates to be a sensible & intense pianist. In 2006, life took him to a new path: techno music. Curious, ironic & creative, fusing electronic music with his jazz & Latin roots.",
+      "The Fire of Anatolia or Anadolu Ateşi is a Turkish dance group consisting of 120 dancers, several choreographers and other technical staff. The group has performed in more than 85 countries from the United States to China and Japan, in front of an audience of approximately 20 million people altogether",
   },
   {
     image: "/images/artists/artist4.png",
@@ -109,9 +106,9 @@ const artists2 = [
   {
     image: "/images/artists/item10.png",
     mark: "/images/artists/imark10.png",
-    name: "Andrea Bocelli",
+    name: "Alessandro Safina",
     description:
-      "An Italian operatic tenor and multi-instrumentalist, Andrea Bocelli is regarded as one of the greatest singing talents in the world. ",
+      "Trained as an opera singer at an early age, Alessandro Safina discovered pop music as a young man and has since blended the two into a style all his own, dubbed 'pop-op' by music critics.",
   },
   {
     image: "/images/artists/item11.png",
@@ -143,7 +140,7 @@ function Artist1(props) {
       >
         <div
           className={`${styles.artist1_content} ${
-            position === "right" ? styles.artist1_content_right : ""
+            position === "_right" ? styles.artist1_content_right : ""
           }`}
         >
           <img src={item.mark} alt="" />
@@ -183,7 +180,18 @@ function Artist2(props) {
       <img className={styles.artist2_image} src={item.image} alt="" />
       <img className={styles.artist2_mark} src={item.mark} alt="" />
       <div className={styles.artist2_name}>{item.name}</div>
-      <div className={styles.artist2_description}>{item.description}</div>
+      <div
+        className={styles.artist2_description}
+        style={
+          item.name === "Alessandro Safina"
+            ? {
+                paddingTop: "24px",
+              }
+            : {}
+        }
+      >
+        {item.description}
+      </div>
     </div>
   );
 }

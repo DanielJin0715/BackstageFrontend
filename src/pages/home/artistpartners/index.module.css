@@ -54,6 +54,7 @@
 }
 
 .artist1_content_right {
+    padding-left: 30px;
     padding-right: 60px;
     align-items: flex-end !important;
     text-align: right !important;
@@ -67,7 +68,7 @@
 .artist1_description {
     font-size: 24px;
     color: #B9B9DB;
-    width: 81%;
+    width: 92%;
 }
 
 .artist1_image_wrapper {

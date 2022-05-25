@@ -26,7 +26,7 @@ const menus = [
     route: "/Backstage_WP.pdf",
   },
   {
-    title: "Terms and Condition",
+    title: "Terms and Conditions",
     route: "/TERMS-OF-USE-AND-PRIVACY POLICY-Bksbackstage.pdf",
   },
 ];
@@ -240,8 +240,8 @@ function Footer() {
         <div>
           ALL RIGHTS RESERVED. <br />
           DESIGNED AND DEVELOPED BY BACKSTAGE.
-          <br /> <br />
-          TERMS AND POLICY
+          {/* <br /> <br />
+          TERMS AND POLICY */}
         </div>
       </div>
     </div>
